@@ -1,0 +1,197 @@
+/*  Underpass is Copyright (C) 2021 Markus Noga
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.   */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.8rem;
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: normal;
+  padding: 0.5rem 0 0 0;
+}
+
+h2 {
+  font-size: 1rem;
+  text-align: center;
+  font-weight: normal;
+  padding: 0.5rem 0 0 0;
+}
+
+.progressOuter {
+  width:100%;
+  height:3rem;
+  border-radius: 0.5rem;
+  background-color: lightgray;
+  box-shadow: inset 0px 0px 10px darkgray;
+}
+
+.progressInner {
+  width:50%;
+  height:3rem;
+  border-radius: 0.5rem;
+  background-color: #f6660f;
+  font-size:  1rem;
+  font-weight: normal;
+  color: white;
+  text-align: right;
+  vertical-align: middle;
+  padding:  1rem 0;
+  display: inline-block;
+}
+
+.main-controls {
+  padding: 0.5rem 0;
+}
+
+.select {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.selector {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  width : 100%;
+  border-radius: 0.5rem;
+
+  background: lightgray;
+  box-shadow: inset 0px 0px 10px darkgray;
+}
+
+.selector:hover, .selector:focus {
+  /* box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 1); */
+  color:  white;
+  background: darkgrey;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#buttons button {
+  font-size: 2rem;
+  padding: 1rem;
+  width: calc(50% - 0.25rem);
+}
+
+button {
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  background: lightslategray;
+  box-shadow: inset 0px 0px 10px darkslategray;
+  text-align: center;
+  color: white;
+  border: none;
+  transition: all 0.2s;
+  padding: 0.5rem;
+}
+
+button:hover, button:focus {
+  /* box-shadow: inset 0px 0px 10px rgba(255, 255, 255, 1); */
+  background: darkslategray;
+}
+
+
+button:active {
+  box-shadow: inset 0px 0px 20px rgba(0,0,0,0.5);
+  transform: translateY(2px);
+}
+
+.recording {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.recIcon {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.recFileName {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.recStatus {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.recDuration {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.recUploadStatus {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.spacer {
+  flex: 1;
+  overflow: auto;  
+}
+
+.legalNotice {
+  font-size: 1rem;
+  font-weight: normal;
+  width: 100%;
+  padding: 0.5rem;
+  background-color: lightgray;
+  display: none;
+}
+
+.legalText {
+  font-size: 1rem;
+  margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+
+.footer {
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 0.5rem 0 0 0;
+}
+
+/* Adjustments for wider screens */
+@media all and (min-width: 800px) {
+  /* Don't take all the space as readability is lost when line length
+     goes past a certain size */
+  .wrapper {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}

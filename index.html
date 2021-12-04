@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- Underpass is Copyright (C) 2021 Markus Noga
+
+     This program is free software: you can redistribute it and/or modify
+     it under the terms of the GNU General Public License as published by
+     the Free Software Foundation, either version 3 of the License, or
+     (at your option) any later version.
+
+     This program is distributed in the hope that it will be useful,
+     but WITHOUT ANY WARRANTY; without even the implied warranty of
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+     GNU General Public License for more details.
+
+     You should have received a copy of the GNU General Public License
+     along with this program.  If not, see <https://www.gnu.org/licenses/>.  -->
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Underpass</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="app.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/5072f9fe39.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+
+    <div class="wrapper">
+
+      <header>
+        <h1><i class="fas fa-archway" style="color:#f6660f"></i> underpass</h1>
+        <h2>A sampling companion for Elektron Model:Samples&#8482; devices</h2>
+      </header>
+
+      <section class="main-controls">
+        <br></br>
+        <table width="100%">
+            <tr><td><div class="select">Audio&nbsp;In</div></td><td><select id="audioInput"  class="selector"></select></td></tr>
+            <!--<tr><td><div class="select">Audio&nbsp;Out</div></td><td><select id="audioOutput" class="selector"></select></td></tr>-->
+            <tr><td><div class="select">MIDI&nbsp;In</div></td><td><select id="midiFromDevice"  class="selector"></select></td></tr>
+            <tr><td><div class="select">MIDI&nbsp;Out</div></td><td><select id="midiToDevice"  class="selector"></select></td></tr>
+            <tr><td><div class="select">Sample&nbsp;ID</div></td><td><input type="number" min="0" max="16383" step="1" value="0" id="sampleID" class="selector"></input></td></tr>
+            <tr><td><br></br></td><td></td></tr>
+            <tr><td><div class="select">Input&nbsp;Level</div></td><td><div class="progressOuter"><span class="progressInner" id="levelMeterInner"></span></div></td></tr>
+        </table>
+
+        <br></br>
+
+        <div id="buttons">
+          <button id="record"><i class="fas fa-circle"></i></button> &nbsp;
+          <button id="stop"><i class="fas fa-stop"></i></button>
+        </div>
+      </section>
+
+      <br></br>
+      <br></br>
+      <table class="recordings" id="recordings"></table>
+
+      <table style="display:none"> <!-- hidden prototype for recordings entries -->
+        <tr id="recordingPrototype"> 
+          <td class="recIcon"><i class="far fa-file-audio"></i></td>
+          <td class="recFileName">fileName</td>
+          <td class="recDuration">0:00.0</td>
+          <td class="recStatus">Recording...</td>
+          <td class="progressOuter"><span class="progressInner">0%</span></td>
+        </tr>
+      </table>
+
+      <div class="spacer"></div>
+
+      <table class="legalNotice" id="legalNotice">
+        <tr><td width="90%">
+        <div class="legalText">
+        underpass: a sampling companion for Elektron Model:Samples&#8482; devices<br/>
+        Copyright &#169; 2021 by Markus Noga 
+        </div>
+
+        <div class="legalText">
+        This program is free software: you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation, either version 3 of the License, or
+        (at your option) any later version.
+        </div>
+
+        <div class="legalText">
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+        </div>
+
+        <div class="legalText">
+        You should have received a copy of the GNU General Public License
+        along with this program.  If not, see 
+        <a href="https://www.gnu.org/licenses/">https://www.gnu.org/licenses/</a>.
+        </div>
+
+        <div class="legalText">
+        All trademarks, registered trademarks, brand names, product names, company names
+        and logos used in this application are the property of their respective owners. 
+        They are used for identification purposes only.
+        </div>
+        </td><td style="text-align: right;vertical-align: top;"><i class="fas fa-times-circle" id="legalClose" style="font-size: 2rem; color:slategray"></i></td></tr>
+      </table>
+
+      <table width="100%"><tr>
+        <td class="footer" id="legalButton"><i class="fas fa-gavel" style="font-size: 2rem;color:#f6660f; padding-right: 0.5rem"></i>Legal</td>
+        <td class="footer" style="text-align: right;">GitHub<a href="https://github.com/mlnoga/underpass" target="_blank" rel="noreferrer noopener"><i class="fab fa-github" style="font-size: 2rem;color:#f6660f; padding-left: 0.5rem"></i></a></td>
+      </tr></table>
+
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
