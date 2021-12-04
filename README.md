@@ -1,7 +1,5 @@
 # underpass
-A sampling companion for [Elektron Model:Samples™](https://www.elektron.se/products/modelsamples/) devices
-
-[Launch the app](https://mlnoga.github.io/underpass)
+A sampling companion for [Elektron Model:Samples™](https://www.elektron.se/products/modelsamples/) devices. Click the image to launch the app.
 
 [![Screenshot](https://mlnoga.github.io/underpass/screenshot.png)](https://mlnoga.github.io/underpass)
 
