@@ -1,9 +1,9 @@
 # underpass
 A sampling companion for [Elektron Model:Samples™](https://www.elektron.se/products/modelsamples/) devices
 
-(Launch the app)[https://mlnoga.github.io/underpass]
+[Launch the app](https://mlnoga.github.io/underpass)
 
-!(Screenshot)[https://mlnoga.github.io/underpass/screenshot.png]
+[![Screenshot](https://mlnoga.github.io/underpass/screenshot.png)](https://mlnoga.github.io/underpass)
 
 ## Value proposition
 underpass adds the missing record button which turns your sample player into a sampler. Just plug it into the USB port of a suitable host Google [Chrome](https://www.google.com/chrome/). Then sample from any audio input onthe host; or resample the output from your device without any loss of quality. 
