@@ -6,17 +6,17 @@ A sampling companion for [Elektron Model:Samples™](https://www.elektron.se/pro
 [![Screenshot](https://mlnoga.github.io/underpass/screenshot.png)](https://mlnoga.github.io/underpass)
 
 ## Value proposition
-underpass adds the missing record button which turns your sample player into a sampler. Just plug it into the USB port of a suitable host Google [Chrome](https://www.google.com/chrome/). Then sample from any audio input onthe host; or resample the output from your device without any loss of quality. 
+underpass adds the missing record button which turns your sample player into a sampler. Just plug it into the USB port of a suitable host. Then sample from any audio input on the host; or resample the output from your device without any loss of quality. 
 
 ## Supported platforms
 
 Any computer running a browser which supports WebRTC, WebAudio and WebMidi.
-* Tested with Chrome on Windows 10. 
+* Tested with Google [Chrome](https://www.google.com/chrome/) on Windows 10. 
 * Android seems to have issues with the class compliant USB audio. Your mileage may vary
 * iOS cannot be supported. Apple have not implemented WebMIDI in their Safari browser and their underlying WebKit
 
 ## Usage
-1. Connect your device with the host using a suitable USB cable. My phone came with a USB-A to USB-C adapter, which works fine with the vendor provided cable. Or get a Micro-USB to USB-C cable
+1. Connect your device with the host using a suitable USB cable. My phone came with a USB-A to USB-C adapter, which works fine with the cable that came with the sample player. Or get a Micro-USB to USB-C cable
 2. Power on your device
 3. Open the underpass index.html file in your Chrome browser. Other browsers like Opera may work, but are untested
 4. Select the appropriate audio input. Choose any line in to sample, or `Model:Samples` to resample the output of your device
