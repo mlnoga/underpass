@@ -13,7 +13,25 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.   */
 
+
 let audioContext; // Global audio context
+
+const enableAudioButton = document.querySelector('button#enableAudio');
+const mainControlsSection = document.querySelector('section#mainControls');
+
+enableAudioButton.onclick=function() {
+    navigator.mediaDevices.getUserMedia({video: false, audio: true}).then( stream => {
+        enableAudioButton.style.display="none";
+        mainControlsSection.style.display="block";
+        navigator.mediaDevices.ondevicechange();
+        navigator.requestMIDIAccess({ sysex : true }).then(midiAccessSuccess).catch(function(err) {
+            alert("Cannot select MIDI devices in this browser. Try Chrome. Error " + err.name + ": " + err.message)
+        });
+    }).catch( err => {
+        console.log("error enabling audio:" + err);
+        alert("Cannot enable audio in this browser:" + err);
+    });
+}
 
 // Audio devices
 //
@@ -102,7 +120,7 @@ navigator.mediaDevices.ondevicechange=function () {
       alert("Cannot select audio devices in this browser. Try Chrome. Error " + err.name + ": " + err.message)
   });
 }
-navigator.mediaDevices.ondevicechange();
+
 
 
 // MIDI devices
@@ -201,10 +219,6 @@ function midiAccessSuccess(ma) {
 
     midiAccess.onstatechange=function() { midiAccessSuccess(midiAccess) }
 }
-
-navigator.requestMIDIAccess({ sysex : true }).then(midiAccessSuccess).catch(function(err) {
-  alert("Cannot select MIDI devices in this browser. Try Chrome. Error " + err.name + ": " + err.message)
-});
 
 var midiSampleDumpPackets;
 var midiSampleDumpPacketsTotal=0;
